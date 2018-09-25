@@ -1415,15 +1415,15 @@ function registerEmail() {
   var email = $("#best-email input").val();
 
   $.post( "https://spik.app/api/register", function() {
-    alert( email );
+    // alert( email );
   })
     .done(function() {
-      alert( "second success" );
+      // alert( "second success" );
     })
     .fail(function() {
-      alert( "error" );
+      // alert( "error" );
     })
     .always(function() {
-      alert( "finished" );
+      // alert( "finished" );
     });
 }
