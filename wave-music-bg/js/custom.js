@@ -1406,3 +1406,24 @@ $(document).ready(function () {
   }
 )
 ;
+
+
+/**
+ * save email
+ */
+function registerEmail() {
+  var email = $("#best-email input").val();
+
+  $.post( "https://spik.app/api/register", function() {
+    alert( email );
+  })
+    .done(function() {
+      alert( "second success" );
+    })
+    .fail(function() {
+      alert( "error" );
+    })
+    .always(function() {
+      alert( "finished" );
+    });
+}

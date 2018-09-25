@@ -124,7 +124,7 @@
                 <input type="email" id="email" class="form-control form-control-light"
                        name="email"
                        placeholder="Enter your Email here...">
-                  <span class="input-group-btn">
+                <span class="input-group-btn">
                     <button type="submit" class="btn btn-color"><i
                         class="icon icon-sm icon-arrows-slim-right-dashed"></i>
                     </button>
@@ -217,7 +217,10 @@
 
             <div class="p-t-b-15">
               <!-- Headline & Description -->
-              <h2><span class="font-weight-200">Spik</span><br><del>don't learn</del>,<br> speak English.</h2>
+              <h2><span class="font-weight-200">Spik</span><br>
+                <del>don't learn</del>
+                ,<br> speak English.
+              </h2>
 
               <p>An AI-based application to help you learn English an train the most unused skill: Speaking.<br>
               </p>
@@ -230,37 +233,40 @@
             <!-- /End Arrow -->
 
             <!-- email field -->
-            <div class="p-t-b-15 btn-row">
-              <input type="email" placeholder="My best email" class="form-control form-control-light main-email"><br>
-            </div>
+            <form>
+              <div id="best-email" class="p-t-b-15 btn-row">
+                <input type="email" placeholder="My best email" class="form-control form-control-light main-email"><br>
+              </div>
 
-            <!-- Buttons -->
-            <div class="p-t-b-15 btn-row">
-              <button class="btn btn-color"
-                      role="button"
-                      id="notify-me"
-                      onclick="sendEmail()"
-              >Notify me
-              </button>
-              <a class="btn btn-border-white show-info"
-                 role="button" data-href="#content">
-                More info
-              </a>
-            </div>
+              <!-- Buttons -->
+              <div class="p-t-b-15 btn-row">
+                <button class="btn btn-color"
+                        role="button"
+                        id="notify-me"
+                        onclick="registerEmail()"
+                        type="button"
+                >Notify me
+                </button>
+                <a class="btn btn-border-white show-info"
+                   role="button" data-href="#content">
+                  More info
+                </a>
+              </div>
+            </form>
             <!-- /End Buttons -->
 
             <!-- Social Media Links -->
             <!--<div class="p-t-b-30">-->
-              <!--<p>-->
-                <!--<a href="https://www.facebook.com/egotypes" class="link-white"><i-->
-                    <!--class="fa fa-facebook"></i></a>-->
-                <!--<a href="https://twitter.com/egotype" class="link-white"><i-->
-                    <!--class="fa fa-twitter"></i></a>-->
-                <!--<a href="https://plus.google.com" class="link-white"><i-->
-                    <!--class="fa fa-google-plus"></i></a>-->
-                <!--<a href="https://www.behance.net/egotype" class="link-white"><i-->
-                    <!--class="fa fa-behance"></i></a>-->
-              <!--</p>-->
+            <!--<p>-->
+            <!--<a href="https://www.facebook.com/egotypes" class="link-white"><i-->
+            <!--class="fa fa-facebook"></i></a>-->
+            <!--<a href="https://twitter.com/egotype" class="link-white"><i-->
+            <!--class="fa fa-twitter"></i></a>-->
+            <!--<a href="https://plus.google.com" class="link-white"><i-->
+            <!--class="fa fa-google-plus"></i></a>-->
+            <!--<a href="https://www.behance.net/egotype" class="link-white"><i-->
+            <!--class="fa fa-behance"></i></a>-->
+            <!--</p>-->
             <!--</div>-->
             <!-- Social Media Links -->
 
@@ -297,14 +303,14 @@
 
               <!-- Social Media Links -->
               <!--<div class="p-t-b-15">-->
-                <!--<p>-->
-                  <!--<a href="https://www.facebook.com/egotypes" target="_blank">-->
-                    <!--<i class="fa fa-facebook"></i></a>-->
-                  <!--<a href="https://twitter.com/egotype" target="_blank">-->
-                    <!--<i class="fa fa-twitter"></i></a>-->
-                  <!--<a href="https://www.instagram.com/egotype___design" target="_blank">-->
-                    <!--<i class="fa fa-instagram"></i></a>-->
-                <!--</p>-->
+              <!--<p>-->
+              <!--<a href="https://www.facebook.com/egotypes" target="_blank">-->
+              <!--<i class="fa fa-facebook"></i></a>-->
+              <!--<a href="https://twitter.com/egotype" target="_blank">-->
+              <!--<i class="fa fa-twitter"></i></a>-->
+              <!--<a href="https://www.instagram.com/egotype___design" target="_blank">-->
+              <!--<i class="fa fa-instagram"></i></a>-->
+              <!--</p>-->
               <!--</div>-->
               <!-- /End Social Media Links -->
 
@@ -425,9 +431,9 @@
                 <!-- Input Message -->
                 <div class="form-group" id="message-field">
                   <label for="form-message" class="sr-only">Message</label>
-                                <textarea class="form-control form-control-dark" rows="1"
-                                          id="form-message" name="form-message"
-                                          placeholder="Message"></textarea>
+                  <textarea class="form-control form-control-dark" rows="1"
+                            id="form-message" name="form-message"
+                            placeholder="Message"></textarea>
                 </div>
                 <!-- /End Input Message -->
 
@@ -458,39 +464,39 @@
               <div class="row">
                 <!--<div class="col-sm-4 col-xs-6 p-t-b-5">-->
 
-                  <!--&lt;!&ndash; Icon &ndash;&gt;-->
-                  <!--<div class="p-t-b-15">-->
-                    <!--<i class="icon icon-lg icon-basic-geolocalize-01"></i>-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; /End Icon &ndash;&gt;-->
+                <!--&lt;!&ndash; Icon &ndash;&gt;-->
+                <!--<div class="p-t-b-15">-->
+                <!--<i class="icon icon-lg icon-basic-geolocalize-01"></i>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /End Icon &ndash;&gt;-->
 
-                  <!--&lt;!&ndash; Address &ndash;&gt;-->
-                  <!--<div class="p-t-b-15">-->
-                    <!--<h4>Address</h4>-->
+                <!--&lt;!&ndash; Address &ndash;&gt;-->
+                <!--<div class="p-t-b-15">-->
+                <!--<h4>Address</h4>-->
 
-                    <!--<p>45 Park Avenue,<br>-->
-                      <!--New York, NY 10016</p>-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; /End Address &ndash;&gt;-->
+                <!--<p>45 Park Avenue,<br>-->
+                <!--New York, NY 10016</p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /End Address &ndash;&gt;-->
 
                 <!--</div>-->
 
                 <!--<div class="col-sm-4 col-xs-6 p-t-b-5">-->
 
-                  <!--&lt;!&ndash; Icon &ndash;&gt;-->
-                  <!--<div class="p-t-b-15">-->
-                    <!--<i class="icon icon-lg icon-basic-smartphone"></i>-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; /End Icon &ndash;&gt;-->
+                <!--&lt;!&ndash; Icon &ndash;&gt;-->
+                <!--<div class="p-t-b-15">-->
+                <!--<i class="icon icon-lg icon-basic-smartphone"></i>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /End Icon &ndash;&gt;-->
 
-                  <!--&lt;!&ndash; Address &ndash;&gt;-->
-                  <!--<div class="p-t-b-15">-->
-                    <!--<h4>Direct</h4>-->
+                <!--&lt;!&ndash; Address &ndash;&gt;-->
+                <!--<div class="p-t-b-15">-->
+                <!--<h4>Direct</h4>-->
 
-                    <!--<p>T. <a href="tel:012345678991"> 01 23 456 78 99 1</a><br>-->
-                      <!--M. <a href="tel:012345678991">01 23 456 78 99 2</a></p>-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; /End Address &ndash;&gt;-->
+                <!--<p>T. <a href="tel:012345678991"> 01 23 456 78 99 1</a><br>-->
+                <!--M. <a href="tel:012345678991">01 23 456 78 99 2</a></p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /End Address &ndash;&gt;-->
 
                 <!--</div>-->
 
@@ -549,6 +555,17 @@
 
 <!-- Custom Script -->
 <script src="js/custom.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72179239-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-72179239-2');
+</script>
+
 
 
 </body>
