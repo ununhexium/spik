@@ -200,7 +200,7 @@ b {
    ---------------------------------- */
 
 .text-color {
-  color: #fe6c17;
+  color: #00a0a0;
 }
 
 .text-white {
@@ -221,7 +221,7 @@ b {
    _____________________________________ */
 
 .bg-color {
-  background-color: #fe6c17;
+  background-color: #00a0a0;
 }
 
 .bg-white {
@@ -368,7 +368,7 @@ a.btn.btn-dark:focus {
 .btn-color,
 a.btn-color {
   color: #fff;
-  background-color: #fe6c17;
+  background-color: #00a0a0;
 }
 
 .btn.btn-color:hover,
@@ -378,7 +378,7 @@ a.btn.btn-color:hover,
 a.btn.btn-color:active,
 a.btn.btn-color:focus {
   color: #fff;
-  background-color: #fe6c17;
+  background-color: #00a0a0;
 }
 
 /* ----------------------------------
@@ -969,7 +969,7 @@ body.vegas-container > .vegas-slide {
 }
 
 .ball-scale-ripple-multiple-color > div {
-  border-color: #fe6c17;
+  border-color: #00a0a0;
 }
 
 .ball-scale-ripple-multiple-bw > div {

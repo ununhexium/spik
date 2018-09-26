@@ -1411,19 +1411,36 @@ $(document).ready(function () {
 /**
  * save email
  */
-function registerEmail() {
-  var email = $("#best-email input").val();
 
-  $.post( "https://spik.app/api/register", function() {
-    // alert( email );
-  })
-    .done(function() {
-      // alert( "second success" );
-    })
-    .fail(function() {
-      // alert( "error" );
-    })
-    .always(function() {
-      // alert( "finished" );
-    });
+function registerEmail() {
+  $.ajax({
+    type: "POST",
+    url: "/api/capture/email",
+    // The key needs to match your method's input parameter (case-sensitive).
+    data: JSON.stringify({ "email": $("#email").val(), "campaign": getUrlParameter("campaign") }),
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data){
+        $("#email").css('color', '#008000');
+      },
+    failure: function(errMsg) {
+      $("#email").css('color', 'red');
+      $("#email").appendChild($("<div>Failed to save your email. Please come back tomorrow.</div>"));
+    }
+  });
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
+    }
+  }
+};
