@@ -1421,7 +1421,8 @@ $(document).ready(function () {
  */
 
 function registerEmail() {
-  var email = $('#best-email>input').val();
+  $("#best-email-input").removeClass("blinking-border")
+  var email = $('#best-email-input').val();
   var campaign = getUrlParameter('campaign');
   campaign = campaign === undefined ? "" : campaign;
   $.ajax({
@@ -1435,12 +1436,12 @@ function registerEmail() {
     contentType: 'application/json'
   })
     .done(function (data) {
-      $('#best-email>input').css('color', '#00a0a0');
-      $('#notify-me').html('Saved<span class="glyphicon glyphicon-ok"></span>').css('color', '#00a0a0');
+      $('#best-email-input').css('color', '#00a0a0');
+      $('#notify-me').html('Saved<span class="glyphicon glyphicon-ok"></span>').css('background-color', '#00b000');
       clearInterval(interval)
     })
     .error(function (errMsg) {
-      $('#best-email>input').css('color', 'red');
+      $('#best-email-input').css('color', 'red');
       $('#notify-me').html('Failed<span class="glyphicon glyphicon-remove"></span>').css('background-color', 'red');
       clearInterval(interval)
     });
