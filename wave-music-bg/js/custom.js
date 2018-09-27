@@ -1,3 +1,5 @@
+var interval = null;
+
 $(document).ready(function () {
 
     "use strict";
@@ -47,12 +49,12 @@ $(document).ready(function () {
     }
 
     setTimeout(function() {
-      setInterval(function() {
+      interval = setInterval(function() {
         shake($('#notify-me'))
       }, 3000);
-    }, 3000);
+    }, 1000);
 
-
+    $("#best-email-input").focus()
 
     /* _____________________________________
 
@@ -1403,6 +1405,12 @@ $(document).ready(function () {
       );
       document.querySelector("head").appendChild(msViewportStyle)
     }
+
+    $("#best-email-input").keydown(function(event) {
+      if (event.keyCode === 13) {
+        $("#notify-me").click();
+      }
+    });
   }
 )
 ;
@@ -1413,28 +1421,35 @@ $(document).ready(function () {
  */
 
 function registerEmail() {
+  var email = $('#best-email>input').val();
+  var campaign = getUrlParameter('campaign');
+  campaign = campaign === undefined ? "" : campaign;
   $.ajax({
-    type: "POST",
-    url: "/api/capture/email",
+    type: 'POST',
+    url: 'https://spik.app/api/capture/email',
     // The key needs to match your method's input parameter (case-sensitive).
-    data: JSON.stringify({ "email": $("#email").val(), "campaign": getUrlParameter("campaign") }),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    success: function(data){
-        $("#email").css('color', '#008000');
-      },
-    failure: function(errMsg) {
-      $("#email").css('color', 'red');
-      $("#email").appendChild($("<div>Failed to save your email. Please come back tomorrow.</div>"));
-    }
-  });
+    data: JSON.stringify({
+      'email': email,
+      'campaign': campaign
+    }),
+    contentType: 'application/json'
+  })
+    .done(function (data) {
+      $('#best-email>input').css('color', '#00a0a0');
+      $('#notify-me').html('Saved<span class="glyphicon glyphicon-ok"></span>').css('color', '#00a0a0');
+      clearInterval(interval)
+    })
+    .error(function (errMsg) {
+      $('#best-email>input').css('color', 'red');
+      $('#notify-me').html('Failed<span class="glyphicon glyphicon-remove"></span>').css('background-color', 'red');
+      clearInterval(interval)
+    });
 }
 
 var getUrlParameter = function getUrlParameter(sParam) {
-  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-    sURLVariables = sPageURL.split('&'),
-    sParameterName,
-    i;
+  var sPageURL = decodeURIComponent(window.location.search.substring(1));
+  var sURLVariables = sPageURL.split('&');
+  var sParameterName, i;
 
   for (i = 0; i < sURLVariables.length; i++) {
     sParameterName = sURLVariables[i].split('=');

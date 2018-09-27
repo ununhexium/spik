@@ -621,7 +621,7 @@ label.message-text {
    _____________________________________ */
 
 .vert-middle {
-  min-height: 700px;
+  min-height: 600px;
   height: 100%;
   align-items: center;
   display: flex;
@@ -1183,6 +1183,63 @@ body.vegas-container > .vegas-slide {
 }
 
 .main-email {
-    max-width: 700px;
+    max-width: 300px;
     text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.blinking-border {
+  -webkit-animation: 2s blink step-end infinite;
+  -moz-animation: 2s blink step-end infinite;
+  -ms-animation: 2s blink step-end infinite;
+  -o-animation: 2s blink step-end infinite;
+  animation: 2s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    border-bottom: 0;
+  }
+  50% {
+    border-bottom: 1px solid;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    border-bottom: 0;
+  }
+  50% {
+    border-bottom: 1px solid;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
 }

@@ -19,7 +19,8 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="css/plugins/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Font Icons -->
   <link rel="stylesheet"
@@ -211,14 +212,13 @@
 
             <!-- Logo -->
             <div class="p-t-b-15">
-              <img src="images/logo-lg.png" height="86" width="70" alt="">
+              <img src="images/SPIK-Logo-C.png" height="150" width="250" alt="">
             </div>
             <!-- /End Logo -->
 
             <div class="p-t-b-15">
               <!-- Headline & Description -->
-              <h2><span class="font-weight-200">Spik</span><br>
-                <span>don't write English,</span><br>
+              <h2><span>don't learn English,</span><br>
                 speak it!
               </h2>
 
@@ -227,32 +227,32 @@
               <!-- /End Headline & Description -->
             </div>
             <!-- Arrow -->
-            <div class="p-t-b-20">
-              <i class="icon icon-sm icon-arrows-slim-down-dashed"></i>
-            </div>
+            <!--<div class="p-t-b-20">-->
+              <!--<i class="icon icon-sm icon-arrows-slim-down-dashed"></i>-->
+            <!--</div>-->
             <!-- /End Arrow -->
 
             <!-- email field -->
-            <form>
-              <div id="best-email" class="p-t-b-15 btn-row">
-                <input type="email" placeholder="My best email" class="form-control form-control-light main-email"><br>
+            <div id="best-email" class="p-t-b-15 btn-row">
+              <div>
+              <input id="best-email-input" type="email" placeholder="Email..." class="form-control form-control-light main-email blinking-border"><br>
               </div>
+            </div>
 
-              <!-- Buttons -->
-              <div class="p-t-b-15 btn-row">
-                <button class="btn btn-color"
-                        role="button"
-                        id="notify-me"
-                        onclick="registerEmail()"
-                        type="button"
-                >Notify me
-                </button>
-                <a class="btn btn-border-white show-info"
-                   role="button" data-href="#content">
-                  More info
-                </a>
-              </div>
-            </form>
+            <!-- Buttons -->
+            <div class="p-t-b-15 btn-row">
+              <button class="btn btn-color"
+                      role="button"
+                      id="notify-me"
+                      onclick="registerEmail()"
+                      type="button"
+              >Notify me
+              </button>
+              <a class="btn btn-border-white show-info"
+                 role="button" data-href="#content">
+                More info
+              </a>
+            </div>
             <!-- /End Buttons -->
 
             <!-- Social Media Links -->
