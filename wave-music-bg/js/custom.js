@@ -54,8 +54,6 @@ $(document).ready(function () {
       }, 3000);
     }, 1000);
 
-    $("#best-email-input").focus()
-
     /* _____________________________________
 
      Device Detection
