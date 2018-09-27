@@ -621,7 +621,7 @@ label.message-text {
    _____________________________________ */
 
 .vert-middle {
-  min-height: 600px;
+  /*min-height: 600px;*/
   height: 100%;
   align-items: center;
   display: flex;
@@ -1159,7 +1159,7 @@ body.vegas-container > .vegas-slide {
    _____________________________________ */
 
 .page-info {
-  min-height: 700px;
+  /*min-height: 700px;*/
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
