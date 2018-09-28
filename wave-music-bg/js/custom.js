@@ -1435,12 +1435,12 @@ function registerEmail() {
   })
     .done(function (data) {
       $('#best-email-input').css('color', '#00a0a0');
-      $('#notify-me').html('Saved<span class="glyphicon glyphicon-ok"></span>').css('background-color', '#00b000');
+      $('#notify-me').html('<span class="glyphicon glyphicon-ok"></span>').css('background-color', '#00b000');
       clearInterval(interval)
     })
     .error(function (errMsg) {
       $('#best-email-input').css('color', 'red');
-      $('#notify-me').html('Failed<span class="glyphicon glyphicon-remove"></span>').css('background-color', 'red');
+      $('#notify-me').html('Failed <span class="glyphicon glyphicon-remove"></span>').css('background-color', 'red');
       clearInterval(interval)
     });
 }
