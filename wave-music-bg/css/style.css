@@ -1245,7 +1245,8 @@ body.vegas-container > .vegas-slide {
 }
 
 @media screen and (max-width: 500px) {
-  img {
+  #logo {
     width: 300px;
+    height: 105px;
   }
 }

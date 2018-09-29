@@ -1419,8 +1419,9 @@ $(document).ready(function () {
  */
 
 function registerEmail() {
-  $("#best-email-input").removeClass("blinking-border")
-  var email = $('#best-email-input').val();
+  let bestEmail = $("#best-email-input");
+  bestEmail.removeClass("blinking-border");
+  var email = bestEmail.val();
   var campaign = getUrlParameter('campaign');
   campaign = campaign === undefined ? "" : campaign;
   $.ajax({
