@@ -1243,3 +1243,9 @@ body.vegas-container > .vegas-slide {
     color: black;
   }
 }
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 300px;
+  }
+}
